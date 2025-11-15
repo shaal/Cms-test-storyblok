@@ -1,11 +1,5 @@
 import { StoryblokStory } from "storyblok-generate-ts";
-import { storyblokInit, apiPlugin, getStoryblokApi, StoryblokComponent } from "@storyblok/react/rsc";
-
-// Initialize Storyblok
-storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN!,
-  use: [apiPlugin],
-});
+import { getStoryblokApi, StoryblokComponent } from "@storyblok/react/rsc";
 
 export default async function Home() {
   let story: StoryblokStory | null = null;
